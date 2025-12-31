@@ -11,7 +11,7 @@ app.use(express.json()); // ✅ REQUIRED for POST/PUT APIs
 
 app.use("/api/employees", routes);
 
-const PORT = process.env.PORT || 5000;
+const PORT = process.env.PORT || 3000;
 
 app.listen(PORT, () => {
   console.log("Server running on port " + PORT);
