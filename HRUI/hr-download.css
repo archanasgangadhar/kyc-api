@@ -1,0 +1,171 @@
+/* =====================
+   Reset
+===================== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* =====================
+   Body
+===================== */
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: #b71c1c;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+/* =====================
+   Container
+===================== */
+.container {
+  width: 360px;
+  padding: 30px;
+  background: #ffffff;
+  border-radius: 10px;
+  box-shadow: 0 15px 35px rgba(0,0,0,0.25);
+  margin-bottom: 20px;
+}
+
+/* =====================
+   Heading
+===================== */
+h2 {
+  text-align: center;
+  margin-bottom: 25px;
+  color: #b71c1c;
+  font-size: 22px;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+}
+
+/* =====================
+   Labels
+===================== */
+label {
+  font-weight: 600;
+  color: #b71c1c;
+  display: block;
+  margin-bottom: 6px;
+}
+
+/* =====================
+   Input
+===================== */
+input {
+  width: 100%;
+  padding: 12px;
+  margin-bottom: 18px;
+  border: 1.5px solid #b71c1c;
+  border-radius: 6px;
+  font-size: 15px;
+  transition: all 0.25s ease;
+}
+
+input::placeholder {
+  color: #777;
+}
+
+input:focus {
+  outline: none;
+  border-color: #b71c1c;
+  box-shadow: 0 0 6px rgba(183, 28, 28, 0.5);
+}
+
+/* =====================
+   Buttons
+===================== */
+button {
+  width: 100%;
+  padding: 12px;
+  background: #b71c1c;
+  color: #ffffff;
+  border: none;
+  border-radius: 6px;
+  font-size: 15px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+button:hover {
+  background: #8e1515;
+}
+
+/* =====================
+   Status Message
+===================== */
+#status {
+  text-align: center;
+  margin-top: 15px;
+  font-size: 14px;
+  font-weight: 600;
+  color: #b71c1c;
+}
+
+/* =====================
+   Excel Download Button Wrapper
+===================== */
+a {
+  width: 360px;
+  text-decoration: none;
+}
+
+/* =====================
+   Secondary Action (Excel Download)
+===================== */
+/* =====================
+   Excel Download Button – Premium Hover
+===================== */
+
+/* =====================
+   Excel Download Button – SAFE & BEAUTIFUL
+===================== */
+a button {
+  background: #ffffff;
+  color: #b71c1c;
+  border: 2px solid #b71c1c;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+  transition: 
+    background 0.35s ease,
+    color 0.35s ease,
+    transform 0.35s ease,
+    box-shadow 0.35s ease;
+}
+
+/* Hover – DIFFERENT COLOR, NO OVERLAY */
+a button:hover {
+  background: linear-gradient(
+    135deg,
+    #ff5252,
+    #b71c1c
+  );
+  color: #ffffff;
+  transform: translateY(-4px) scale(1.03);
+  box-shadow: 
+    0 10px 22px rgba(183, 28, 28, 0.45);
+}
+
+/* =====================
+   Responsive
+===================== */
+@media (max-width: 480px) {
+  .container {
+    width: 92%;
+    padding: 25px;
+  }
+
+  a {
+    width: 92%;
+  }
+
+  h2 {
+    font-size: 20px;
+  }
+}

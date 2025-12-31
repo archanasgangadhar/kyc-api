@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Employee Joining Form</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+
+<!-- Duplicate form and container removed. Only one form and one set of fields remain. -->
+<div class="container">
+<h1>Employee Joining Form</h1>
+<form
+  id="joiningForm"
+  method="post"
+  enctype="multipart/form-data"
+  action="http://localhost:5000/api/employees/join"
+/>
+
+
+<section><h2>Employee Basic Details</h2>
+<label for="fullName">Full Name</label><input id="fullName" name="fullName" placeholder="Enter full name">
+<label for="dob">Date of Birth</label><input id="dob" name="dob" type="date">
+<label for="gender">Gender</label><select id="gender" name="gender"><option value="">Select Gender</option><option value="Male">Male</option><option value="Female">Female</option></select>
+<label for="maritalStatus">Marital Status</label><select id="maritalStatus" name="maritalStatus"><option value="">Select Marital Status</option><option value="Married">Married</option><option value="Unmarried">Unmarried</option></select>
+<label for="mobile">Mobile Number</label><input id="mobile" name="mobile" placeholder="Enter mobile number">
+<label for="email">Email</label><input id="email" name="email" placeholder="Enter email">
+<label for="bloodGroup">Blood Group</label><input id="bloodGroup" name="bloodGroup" placeholder="Enter blood group">
+</section>
+
+<section><h2>Address Details</h2>
+<label for="currentAddress">Current Address</label><input id="currentAddress" name="currentAddress" placeholder="Enter current address">
+<label for="permanentAddress">Permanent Address</label><input id="permanentAddress" name="permanentAddress" placeholder="Enter permanent address">
+</section>
+
+<section><h2>Employee KYC</h2>
+<label for="aadhaar">Aadhaar Number</label><input id="aadhaar" name="aadhaarNumber" placeholder="Enter Aadhaar number">
+<label>Aadhaar Front</label><input type="file" name="aadhaarFront">
+<label>Aadhaar Back</label><input type="file" name="aadhaarBack">
+<label for="pan">PAN Number</label><input id="pan" name="pan" placeholder="Enter PAN number">
+<label>PAN Front</label><input type="file" name="panFront">
+<label>PAN Back</label><input type="file" name="panBack">
+<label for="passport">Passport Number</label><input id="passport" name="passport" placeholder="Enter passport number">
+<label>Passport Front</label><input type="file" name="passportFront">
+<label>Passport Back</label><input type="file" name="passportBack">
+<label for="dl">Driving License Number</label><input id="dl" name="dl" placeholder="Enter driving license number">
+<label>DL Front</label><input type="file" name="dlFront">
+<label>DL Back</label><input type="file" name="dlBack">
+<label for="rationCard">Ration Card Number</label><input id="rationCard" name="rationCard" placeholder="Enter ration card number">
+<label>Ration Card Front</label><input type="file" name="rationCardFront">
+<label>Ration Card Back</label><input type="file" name="rationCardBack">
+</section>
+
+<section><h2>Photo & Signature</h2>
+<label>Employee Photo</label><input type="file" name="employeePhoto">
+<label>Signature</label><input type="file" name="signature">
+</section>
+
+<section><h2>Father Details</h2>
+<label for="fatherName">Father Name</label><input id="fatherName" name="fatherName" placeholder="Enter father name">
+<label>Aadhaar Front</label><input type="file" name="fatherAadhaarFront">
+<label>Aadhaar Back</label><input type="file" name="fatherAadhaarBack">
+<label>PAN Front</label><input type="file" name="fatherPanFront">
+<label>PAN Back</label><input type="file" name="fatherPanBack">
+<label>Passport Size Photo</label><input type="file" name="fatherPassportPhoto">
+</section>
+
+<section><h2>Mother Details</h2>
+<label for="motherName">Mother Name</label><input id="motherName" name="motherName" placeholder="Enter mother name">
+<label>Aadhaar Front</label><input type="file" name="motherAadhaarFront">
+<label>Aadhaar Back</label><input type="file" name="motherAadhaarBack">
+<label>Passport Size Photo</label><input type="file" name="motherPassportPhoto">
+</section>
+
+<section><h2>Wife Details</h2>
+<label for="wifeName">Wife Name</label><input id="wifeName" name="wifeName" placeholder="Enter wife name">
+<label>Aadhaar Front</label><input type="file" name="wifeAadhaarFront">
+<label>Aadhaar Back</label><input type="file" name="wifeAadhaarBack">
+<label>Passport Size Photo</label><input type="file" name="wifePassportPhoto">
+<label>Marriage Certificate</label><input type="file" name="wifeMarriageCertificate">
+</section>
+
+<section>
+<h2>Children Details</h2>
+<div id="children"></div>
+<button type="button" onclick="addChild()">Add Child</button>
+</section>
+
+<section><h2>Bank & Statutory</h2>
+<label for="bankName">Bank Name</label><input id="bankName" name="bankName" placeholder="Enter bank name">
+<label for="accountHolder">Account Holder Name</label><input id="accountHolder" name="accountHolder" placeholder="Enter account holder name">
+<label for="accountNumber">Account Number</label><input id="accountNumber" name="accountNumber" placeholder="Enter account number">
+<label for="ifsc">IFSC Code</label><input id="ifsc" name="ifsc" placeholder="Enter IFSC code">
+<label>Bank Passbook/Cancelled Cheque/Bank Statement(Anyone doc)</label><input type="file" name="bankDocument">
+<label for="uan">UAN Number</label><input id="uan" name="uan" placeholder="Enter UAN number">
+<label for="esi">ESI Number</label><input id="esi" name="esi" placeholder="Enter ESI number">
+</section>
+
+<section><h2>Education Details</h2>
+<label for="qualification">Highest Qualification</label><input id="qualification" name="qualification" placeholder="Enter highest qualification">
+<label for="institution">Institution Name</label><input id="institution" name="institution" placeholder="Enter institution name">
+<label for="year">Year of Passing</label><input id="year" name="year" placeholder="Enter year of passing">
+<label>Education Certificate</label><input type="file" name="educationCertificate">
+</section>
+
+<section><h2>Employment Details</h2>
+<label for="totalExperience">Total Experience</label><input id="totalExperience" name="totalExperience" placeholder="Enter total experience">
+<label for="lastCompany">Last Company Name</label><input id="lastCompany" name="lastCompany" placeholder="Enter last company name">
+<label for="lastDesignation">Last Designation</label><input id="lastDesignation" name="lastDesignation" placeholder="Enter last designation">
+<label>Experience Letter</label><input type="file" name="experienceLetter">
+<label>Last Payslip</label><input type="file" name="lastPayslip">
+<label>Relieving Letter</label><input type="file" name="relievingLetter">
+</section>
+
+<section><h2>Nominee Details (Gratuity Form F) (PF Form 11) (ESI Form 1) and for all statutory purpose</h2>
+<div id="nominees"></div>
+<button type="button" onclick="addNominee()">Add Nominee(Click here)</button>
+</section>
+
+<section><h2>Emergency Contact</h2>
+<label for="emergencyContactName">Contact Name</label><input id="emergencyContactName" name="emergencyContactName" placeholder="Enter contact name">
+<label for="emergencyRelationship">Relationship</label><input id="emergencyRelationship" name="emergencyRelationship" placeholder="Enter relationship">
+<label for="emergencyMobile">Mobile Number</label><input id="emergencyMobile" name="emergencyMobile" placeholder="Enter mobile number">
+</section>
+
+<button class="submit" type="submit">Submit</button>
+</form>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>

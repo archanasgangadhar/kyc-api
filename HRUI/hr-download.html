@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>HR Document Download</title>
+  <link rel="stylesheet" href="hr-download.css">
+</head>
+<body>
+
+  <div class="container">
+    <h2>Employee Document Download</h2>
+
+    <label for="employeeId">Employee ID</label>
+    <input type="number" id="employeeId" placeholder="Enter Employee ID">
+
+    <button onclick="downloadZip()">Download All Documents</button>
+
+    <p id="status"></p>
+  </div>
+
+  <a href="http://localhost:5000/api/employees/hr/export/excel">
+  <button>Download Full Employee Excel</button>
+</a>
+
+
+  <script src="hr-download.js"></script>
+</body>
+</html>

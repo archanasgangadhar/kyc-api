@@ -1,0 +1,216 @@
+/* =====================
+   Global Styles
+===================== */
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: #b71c1c;
+  margin: 0;
+  padding: 20px;
+  color: #333;
+  min-height: 100vh;
+}
+
+/* =====================
+   Container
+===================== */
+.container {
+  max-width: 1200px;
+  margin: auto;
+  background: #ffffff;
+  padding: 35px;
+  border-radius: 12px;
+  box-shadow: 0 15px 40px rgba(0,0,0,0.25);
+}
+
+/* =====================
+   Headings
+===================== */
+h1 {
+  text-align: center;
+  color: #b71c1c;
+  margin-bottom: 35px;
+  font-size: 30px;
+  font-weight: 700;
+  letter-spacing: 1px;
+}
+
+h2 {
+  color: #b71c1c;
+  border-left: 6px solid #b71c1c;
+  padding-left: 12px;
+  margin-bottom: 20px;
+  font-size: 20px;
+  font-weight: 600;
+}
+
+/* =====================
+   Sections
+===================== */
+section {
+  border: 1px solid #b71c1c;
+  padding: 25px;
+  margin-bottom: 30px;
+  border-radius: 10px;
+  background: #ffffff;
+}
+
+/* =====================
+   Labels
+===================== */
+label {
+  display: block;
+  margin-bottom: 6px;
+  font-weight: 600;
+  color: #b71c1c;
+}
+
+/* =====================
+   Inputs & Selects
+===================== */
+input,
+select {
+  width: 100%;
+  padding: 12px;
+  margin-bottom: 18px;
+  border: 1.5px solid #b71c1c;
+  border-radius: 6px;
+  font-size: 15px;
+  box-sizing: border-box;
+  transition: all 0.25s ease;
+  background: #ffffff;
+}
+
+input::placeholder {
+  color: #777;
+}
+
+input:focus,
+select:focus {
+  border-color: #b71c1c;
+  outline: none;
+  box-shadow: 0 0 6px rgba(183, 28, 28, 0.5);
+}
+
+/* =====================
+   File Inputs
+===================== */
+input[type="file"] {
+  padding: 8px;
+  border: 1.5px dashed #b71c1c;
+  background: #ffffff;
+  cursor: pointer;
+}
+
+/* =====================
+   Buttons
+===================== */
+button {
+  padding: 12px 22px;
+  background: #b71c1c;
+  border: none;
+  color: #ffffff;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 15px;
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+
+button:hover {
+  background: #8e1515;
+}
+
+/* Submit Button */
+.submit {
+  width: 100%;
+  margin-top: 30px;
+  font-size: 18px;
+  padding: 16px;
+  background: #b71c1c;
+}
+
+/* =====================
+   Dynamic Child / Nominee Blocks
+===================== */
+#children div,
+#nominees div {
+  padding: 20px;
+  margin-bottom: 20px;
+  border: 1.5px solid #b71c1c;
+  border-radius: 8px;
+  background: #ffffff;
+}
+
+h3 {
+  color: #b71c1c;
+  margin-bottom: 15px;
+  font-size: 17px;
+  font-weight: 600;
+}
+
+/* =====================
+   Horizontal Line
+===================== */
+hr {
+  border: none;
+  border-top: 1px solid #b71c1c;
+  margin-top: 20px;
+}
+
+/* =====================
+   Responsive
+===================== */
+@media (max-width: 768px) {
+  body {
+    padding: 10px;
+  }
+
+  .container {
+    padding: 20px;
+  }
+
+  h1 {
+    font-size: 24px;
+  }
+
+  h2 {
+    font-size: 18px;
+  }
+
+  section {
+    padding: 18px;
+  }
+
+  input,
+  select {
+    font-size: 14px;
+    padding: 10px;
+  }
+
+  button {
+    padding: 10px 18px;
+  }
+}
+
+@media (max-width: 480px) {
+  .container {
+    padding: 15px;
+  }
+
+  section {
+    padding: 15px;
+  }
+
+  h1 {
+    font-size: 20px;
+  }
+
+  h2 {
+    font-size: 16px;
+  }
+
+  button {
+    font-size: 14px;
+    padding: 10px;
+  }
+}
